@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exact Pixel Artistry - Redirecting...</title>
+    <script>
+      // GitHub Pages SPA redirect
+      // This script takes the current URL and redirects to the main page with the path as a hash
+      const path = window.location.pathname.slice(1);
+      const search = window.location.search;
+      
+      if (path || search) {
+        const redirect = '/exact-pixel-artistry/#/' + path + search;
+        window.location.replace(redirect);
+      } else {
+        window.location.replace('/exact-pixel-artistry/');
+      }
+    </script>
+  </head>
+  <body>
+    <div style="text-align: center; padding: 50px; font-family: Arial, sans-serif;">
+      <h1>Redirecting...</h1>
+      <p>If you are not redirected automatically, <a href="/exact-pixel-artistry/">click here</a>.</p>
+    </div>
+  </body>
+</html> 
