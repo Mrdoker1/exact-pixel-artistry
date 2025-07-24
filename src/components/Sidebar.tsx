@@ -3,8 +3,8 @@ import { NavigationItem } from './NavigationItem';
 
 export const Sidebar: React.FC = () => {
   return (
-    <aside className="w-1/5 max-md:w-full max-md:ml-0">
-      <div className="bg-[rgba(243,248,254,1)] relative flex w-full flex-col mx-auto pt-6 pb-[412px] px-6 max-md:pb-[100px] max-md:px-5">
+    <aside className="w-1/5 max-md:w-full max-md:ml-0 h-screen flex flex-col">
+      <div className="bg-[rgba(243,248,254,1)] relative flex w-full flex-col mx-auto pt-6 px-6 max-md:px-5 flex-1">
         <div className="z-0 flex min-h-12 w-12" />
         
         <div className="self-stretch z-0 w-full max-w-60 text-sm text-[#116EEE] font-bold text-center mt-6">
@@ -38,7 +38,7 @@ export const Sidebar: React.FC = () => {
           </div>
         </div>
 
-        <nav className="self-stretch z-0 w-full overflow-hidden mt-6">
+        <nav className="self-stretch z-0 w-full overflow-y-auto mt-6 flex-1 pb-20">
           <NavigationItem
             icon="https://api.builder.io/api/v1/image/assets/a61b8aff1f9a4d4b8c540558ab06b276/f850b76348db8d63352fd1f7597ce5878f878952?placeholderIfAbsent=true"
             text="Complete German"
@@ -175,7 +175,8 @@ export const Sidebar: React.FC = () => {
           </NavigationItem>
         </nav>
 
-        <div className="bg-[rgba(243,248,254,1)] shadow-[0px_-1px_0px_rgba(214,222,230,1)] absolute z-0 w-[292px] max-w-[292px] text-xs text-white font-normal whitespace-nowrap px-6 py-4 right-0 bottom-0 max-md:px-5">
+        {/* Footer fixed at bottom */}
+        <div className="bg-[rgba(243,248,254,1)] shadow-[0px_-1px_0px_rgba(214,222,230,1)] z-10 w-full text-xs text-white font-normal whitespace-nowrap px-6 py-4 mt-auto max-md:px-5">
           <div className="flex items-center gap-6">
             <div className="self-stretch w-8 my-auto">
               <div className="stroke-[1px] border bg-[#0E58BE] flex flex-col items-center w-8 justify-center h-8 fill-[#0E58BE] px-[3px] rounded-[50%] border-[rgba(0,0,0,0.1)] border-solid">
@@ -190,7 +191,7 @@ export const Sidebar: React.FC = () => {
           </div>
         </div>
 
-        <button className="absolute z-0 flex w-9 gap-2.5 h-9 bg-[#F3F8FE] p-2.5 rounded-[0_8px_8px_0] -right-9 top-24">
+        <button className="absolute z-20 flex w-9 gap-2.5 h-9 bg-[#F3F8FE] p-2.5 rounded-[0_8px_8px_0] -right-9 top-24">
           <img
             src="https://api.builder.io/api/v1/image/assets/a61b8aff1f9a4d4b8c540558ab06b276/a09f255e442ff9051a38659faddb4011ae0b2b7c?placeholderIfAbsent=true"
             className="aspect-[1] object-contain w-4"
